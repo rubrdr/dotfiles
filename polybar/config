@@ -1,0 +1,93 @@
+; Polybar configuration
+; WM : i3wm
+
+
+; Global configuration
+[bar/mybar]
+; Defining which module is where
+modules-right = cpu memory network filesystem
+modules-center = date
+modules-left = i3
+
+; Size of the bar
+width = 100%
+height = 25
+padding-right = 1
+module-margin=1
+radius = 0.0
+
+; Set the center of the bar on the middle of the screen
+; Allowing modules-center to be at the middle of the screen
+fixed-center = true
+
+; Set a flat grey as background color for the bar
+background = #212121
+
+; Set the fonts
+; Font Awesome 5 Free must be installed
+font-0 = "SourceCodePro:size=10:antialias=true;3"
+font-1 = "Font Awesome 5 Free Regular:style=Regular:ize=11;4"
+font-2 = "Font Awesome 5 Free Solid:style=Solid:size=11;2"
+
+; CPU module configuration
+[module/cpu]
+type = internal/cpu
+interval = 1
+label = %percentage%%   
+
+format-prefix = " "
+
+; Memory module configuration
+[module/memory]
+type = internal/memory
+label = %gb_used%/%gb_total%
+format-prefix = " "
+
+; Network module configuration
+[module/network]
+type = internal/network
+interface = enp0s3
+
+format-connected-prefix = " "
+label-connected = %local_ip%
+
+; I3 module configuration
+[module/i3]
+type = internal/i3
+pin-workspaces = true
+strip-wsnumbers = false
+index-sort = true
+enable-click = false
+enable-scroll = false
+wrapping-scroll = false
+fuzzy-match = true
+
+label-focused = %index%
+label-focused-background = #00897B
+label-focused-padding = 1
+
+label-unfocused = %index%
+label-unfocused-padding = 1
+
+label-visible = %index%
+label-visible-padding = 1
+
+label-urgent = %index%
+label-urgent-background = #d32f2f
+label-urgent-padding = 1
+
+; Date module configuration
+[module/date]
+type = internal/date
+date = %d/%m/%Y
+time = %H:%M:%S
+
+label = %time% %date%
+
+; Filesystem module configuration
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+
+label-mounted = %used%/%total%
+format-mounted-prefix = " "
