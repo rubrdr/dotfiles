@@ -1,0 +1,6 @@
+configuration {
+  modi: "window,drun,ssh";
+  theme: "slate";
+  font: "SourceCodePro 10";
+}
+
