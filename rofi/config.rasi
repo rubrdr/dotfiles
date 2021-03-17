@@ -1,3 +1,7 @@
+/*
+* Basic Rofi Launcher configuration
+*/
+
 configuration {
   modi: "window,drun,ssh";
   theme: "slate";
