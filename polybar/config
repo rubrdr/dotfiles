@@ -63,7 +63,8 @@ wrapping-scroll = false
 fuzzy-match = true
 
 label-focused = %index%
-label-focused-background = #00897B
+label-focused-background = #8C9440
+label-focused-foreground = #212121
 label-focused-padding = 1
 
 label-unfocused = %index%
