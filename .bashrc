@@ -61,3 +61,4 @@ function prompt() {
 
 alias vi="vim"
 PROMPT_COMMAND=prompt
+export EDITOR=/usr/bin/vim
