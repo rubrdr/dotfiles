@@ -21,7 +21,7 @@ export PATH
 # Bash prompt modification 
 # Source : zessx - https://gist.github.com/zessx/10777a44ff56304487e7970142ca0b65
 BRANCH_SAFE=("develop", "dev")
-BRANCH_UNSAFE=("main")
+BRANCH_UNSAFE=("main", "master")
 USER_UNSAFE=("root", "git")
 
 function in_array() {
